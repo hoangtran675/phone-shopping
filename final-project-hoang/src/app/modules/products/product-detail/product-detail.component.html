@@ -1,0 +1,20 @@
+<!-- <div class="container"> -->
+    <div class="row center-screen mt-5">
+        <div class="col-6 offset-3">
+            <h1>{{ product.productName }}</h1>
+            <img width = "600" src="{{ product.image }}" alt="" />
+            <h3><strong>Price : {{product.price}}</strong></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2  offset-4">
+            <!-- cách 1 : route tại html, cách 2: route tại html -->
+            <!-- <button class="btn btn-info" [routerLink]="['/inside/products/detail', item.id]" (click)="updateProduct(product)">Update</button> -->
+            <button class="btn btn-info" (click)="updateProduct(product)">Update</button>
+        </div>
+        <div class="col-2 offset-1">
+            <button class="btn btn-danger" (click)="deleteProduct(product)">Delete</button>
+        </div>
+    </div>
+<!-- </div> -->
+

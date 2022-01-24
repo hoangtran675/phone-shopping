@@ -1,0 +1,13 @@
+.product-list{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    .list-group {
+        .list-group-item {
+            cursor: pointer;
+            &:hover {
+                color : grey;
+            }
+        }
+    }
+}
+

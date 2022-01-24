@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-header">
+        <!-- <h3>{{item.id}} : {{item.name}}</h3> -->
+    </div>
+    <div class="card-body">
+        <div>
+            <!-- Khi nhấn vào ảnh thì sẽ trả ra trang product-detail.component.html -->
+            <!-- Khi click vào thì URL thêm một dấu sẽ có cú pháp /item.id -->
+            <!-- / là param thứ nhất của routerLink, item.id là param thứ 2 của routerLink -->
+            <!-- nếu là hai thông số [routerLink]="['product/',item.id] -->
+
+            <a [routerLink]="['/', item.id]">
+              <img width="400" height="300" src="{{ item.image }}" alt="" width="400" />
+            </a>
+            <strong>{{ item.description }}</strong>
+          </div>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-info float-end" (click)="viewMore(item)">
+        View More
+      </button>
+    </div>
+</div>

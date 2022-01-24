@@ -1,0 +1,12 @@
+<div class="container">
+    <div></div>
+    <div class="row mt-5">
+        <div class="col-4 mt-3" *ngFor="let category of categories">
+            <app-categories-item 
+                [item] = "category"
+                (viewMoreChild)="viewMore(category)"
+            >
+            </app-categories-item>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="row mt-2"></div>
+<div class="row center-screen mt-5"><h1>{{nameOfForm}}</h1></div>
+<div class="container mt-5">
+    <div class="row">
+        <!-- <div class="col-2"></div> -->
+        <div class="form col-8 offset-2">
+            <form   autocomplete="off"
+        [formGroup] = "addForm"
+        (ngSubmit)="addProduct(addForm.value)"    
+        id = "form-add">
+
+    <div class="form-group" >
+        <label for="id">Product ID</label>
+        <input formControlName="id" type="text" class="form-control" id="id" readonly="true">
+
+        <label for="productName">Product Name</label>
+        <input formControlName="productName" type="text" class="form-control" id="productName">
+
+        <label for="price">Price</label>
+        <input formControlName="price" type="text" class="form-control" id="price">
+
+        <label for="image">Image Address</label>
+        <input formControlName="image" type="text" class="form-control" id="image">
+
+        <label for="categoryID">Category ID</label>
+        <input formControlName="categoryID" type="text" class="form-control" id="categoryID">
+
+        <label for="createDate">createDate</label>
+        <input formControlName="createDate" type="date" class="form-control" id="createDate"> 
+
+        <label for="supplierID">Supplier ID</label>
+        <input formControlName="supplierID" type="text" class="form-control" id="supplierID"> 
+        
+        <button type="submit" class="btn btn-primary mr-1 mt-3" (click)="handleAddProduct()">Save</button>
+    </div>
+
+
+</form>
+        </div>
+    </div>
+</div>
+
